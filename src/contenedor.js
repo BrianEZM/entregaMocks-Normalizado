@@ -87,9 +87,7 @@ class Contenedor {
 							console.log(err);
 							throw err;
 						});
-					// .finally(() => {
-					// 	this.knex.destroy();
-					// });
+				
 				} else {
 					await this.knex
 						.insert(product)
@@ -99,9 +97,7 @@ class Contenedor {
 							console.log(err);
 							throw err;
 						});
-					// .finally(() => {
-					// 	this.knex.destroy();
-					// });
+		
 				}
 			});
 		} catch (error) {

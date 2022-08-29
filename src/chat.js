@@ -36,9 +36,7 @@ class Chat {
 					throw err;
 				});
 			return response;
-			// .finally(() => {
-			// 	this.knex.destroy();
-			// });
+	
 		} catch (error) {
 			throw new Error(`Error al listar todo: ${error}`);
 		}
@@ -57,9 +55,7 @@ class Chat {
 							console.log(err);
 							throw err;
 						});
-					// .finally(() => {
-					// 	this.knex.destroy();
-					// });
+				
 				} else {
 					await this.knex
 						.insert(message)
@@ -69,9 +65,7 @@ class Chat {
 							console.log(err);
 							throw err;
 						});
-					// .finally(() => {
-					// 	this.knex.destroy();
-					// });
+				
 				}
 			});
 		} catch (error) {

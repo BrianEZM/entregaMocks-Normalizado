@@ -51,14 +51,6 @@ router.put("/:id", async (req, res) => {
 	if (nombre === "" || precio === "" || imagen === "" || stock === "") {
 		res.render("updateProduct", { response: false });
 	} else {
-		// const response = {
-		// 	nombre: nombre,
-		// 	precio: Number(precio),
-		// 	imagen: imagen,
-		// 	cantidad: Number(stock),
-		// };
-		// await contenedor.update(Number(id), response);
-
 		const response = await contenedor.update(Number(id), {
 			nombre: nombre,
 			precio: Number(precio),

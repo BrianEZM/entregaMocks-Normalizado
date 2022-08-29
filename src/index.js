@@ -56,7 +56,7 @@ io.on("connection", async (socket) => {
 });
 
 // <------------------------- Configuracion Servidor ------------------------->
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8080;
 
 const connectedServer = httpServer.listen(PORT, () => {
 	console.log(
