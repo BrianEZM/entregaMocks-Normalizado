@@ -1,4 +1,5 @@
 import knex from "knex";
+import { faker } from "@faker-js/faker"
 
 class Contenedor {
 	constructor({ options, table }) {
@@ -49,6 +50,18 @@ class Contenedor {
 							return response;
 		} catch (error) {
 			throw new Error(`Error al listar todo: ${error}`);
+		}
+	};
+
+	async getAllRandom() {
+		try {
+			const response = [];
+			let prueba1 = await faker.name.fullName()
+			console.log(prueba1);
+			response.push(prueba1)
+			return response;
+		} catch (error) {
+			throw new Error(`Error al listar RANDOM FAKERS: ${error}`);
 		}
 	};
 

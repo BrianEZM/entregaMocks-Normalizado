@@ -28,6 +28,14 @@ router.get("/:id?", async (req, res) => {
 	}
 });
 
+router.get("/test", async (req, res) => {
+
+		const response = await contenedor.getAllRandom();
+		// res.render("allRandomProds", { response });
+		res.json(response)
+
+});
+
 router.post("/", async (req, res) => {
 	const { nombre, precio, imagen, stock } = req.body;
 	if (nombre === "" || precio === "" || imagen === "" || stock === "") {
