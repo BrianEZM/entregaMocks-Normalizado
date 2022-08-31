@@ -36,3 +36,7 @@ form input {
 #chat i {
   color: rgba(48, 5, 56, 0.854);
 }
+
+#border-success {
+  border-color: black;
+}

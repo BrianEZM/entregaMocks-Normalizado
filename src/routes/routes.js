@@ -28,11 +28,11 @@ router.get("/:id?", async (req, res) => {
 	}
 });
 
-router.get("/test", async (req, res) => {
+router.get("/test/test", async (req, res) => {
 
 		const response = await contenedor.getAllRandom();
-		// res.render("allRandomProds", { response });
-		res.json(response)
+		res.render("allRandomProds", { response });
+		// res.json(response)
 
 });
 

@@ -56,9 +56,14 @@ class Contenedor {
 	async getAllRandom() {
 		try {
 			const response = [];
-			let prueba1 = await faker.name.fullName()
-			console.log(prueba1);
-			response.push(prueba1)
+			for (let i = 0; i < 5; i++) {
+				let prueba1 = await {
+					"id": i,
+					"nombre":faker.commerce.product(),
+					"precio": faker.commerce.price(),
+					"imagen":faker.image.business()}
+				response.push(prueba1)
+				}
 			return response;
 		} catch (error) {
 			throw new Error(`Error al listar RANDOM FAKERS: ${error}`);
