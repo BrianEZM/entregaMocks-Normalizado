@@ -27,6 +27,7 @@ const contenedor = new Contenedor({
 	table: optionsMySQL.table,
 });
 
+// CHAT PERSISTENCIA SQLITE
 import Chat from "./chat.js";
 const chat = new Chat({
 	options: optionsSQLite.options,

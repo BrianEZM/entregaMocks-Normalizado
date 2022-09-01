@@ -28,8 +28,15 @@ router.get("/:id?", async (req, res) => {
 	}
 });
 
-router.get("/test/test", async (req, res) => {
+// CHAT PERSISTENCIA ARCHIVO.TXT PARA NORMALIZAR
+import prueba from "./normalizando.js";
+import ContenedorChatFile from "../chatFile.js"
+const chatFile = new ContenedorChatFile("ecommerce.txt");
 
+
+router.get("/test/test", async (req, res) => {
+		// const prueba22 = chatFile.listarAll()
+		prueba();
 		const response = await contenedor.getAllRandom();
 		res.render("allRandomProds", { response });
 		// res.json(response)

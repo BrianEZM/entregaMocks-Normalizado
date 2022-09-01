@@ -1,5 +1,6 @@
 import knex from "knex";
 import { faker } from "@faker-js/faker"
+import fs from "fs"
 
 class Contenedor {
 	constructor({ options, table }) {
